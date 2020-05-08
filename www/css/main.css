@@ -1,0 +1,101 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.terminal {
+    color: #FFF;
+    background-color: #000;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12pt;
+    position: relative;
+    white-space: pre;
+    overflow: hidden;
+}
+
+.terminal>.content {
+    position: relative;
+    padding: 5px 7px;
+}
+
+.terminal>.content>input {
+    background-color: #000;
+    color: #FFF;
+    border: none;
+    outline: none;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12pt;
+}
+
+.main>.terminal {
+    width: 100%;
+    height: 100%;
+}
+
+.main>.powerline-menu {
+    position: relative;
+    bottom: 30px;
+}
+
+.powerline-menu {
+    display: flex;
+    background-color: #AAA;
+    width: 100%;
+    height: 30px;
+}
+
+.powerline-menu>a:visited,
+.powerline-menu>a:hover,
+.powerline-menu>a:active
+{
+    color: #FFF;
+}
+
+.powerline-menu>a.item {
+    width: 10%;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.powerline-menu>a.item:nth-of-type(n+2) {
+    margin-left: -15px;
+}
+.powerline-menu>a.item:nth-of-type(1) {
+    background-color: #FF0;
+    color: #555
+}
+.powerline-menu>a.item:nth-of-type(2) {
+    background-color: #555;
+}
+
+.powerline-menu>a.item:nth-of-type(3) {
+    background-color: #F00;
+}
+
+.powerline-menu>.arrow-right {
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid;
+}
+.powerline-menu>div.arrow-right:nth-of-type(1) {
+    border-left-color: #FF0;
+}
+.powerline-menu>div.arrow-right:nth-of-type(2) {
+    border-left-color: #555;
+}
+.powerline-menu>div.arrow-right:nth-of-type(3) {
+    border-left-color: #F00;
+}
