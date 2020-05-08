@@ -1,0 +1,13 @@
+web:
+  image: nginx:alpine
+  ports:
+    - 8080:80
+  links:
+    - php:phpfpm
+  volumes:
+    - ./etc/nginx/conf.d:/etc/nginx/conf.d:ro
+    - ./www:/usr/share/nginx/html:ro
+php:
+  image: php:7-fpm
+  volumes:
+    - ./www:/var/www/html
